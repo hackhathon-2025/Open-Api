@@ -38,6 +38,42 @@ const options: swaggerJsdoc.Options = {
             },
           },
         },
+        Match: {
+          type: "object",
+          required: ["id", "competition_id", "player1_id", "player2_id", "start_time", "round", "status"],
+          properties: {
+            id: {
+              type: "number",
+              description: "The auto-generated id of the match",
+            },
+            competition_id: {
+              type: "number",
+              description: "The id of the competition the match belongs to",
+            },
+            player1_id: {
+              type: "number",
+              description: "The id of the first player",
+            },
+            player2_id: {
+              type: "number",
+              description: "The id of the second player",
+            },
+            start_time: {
+              type: "string",
+              format: "date-time",
+              description: "The start time of the match",
+            },
+            round: {
+              type: "string",
+              description: "The round of the match (e.g., '1er Tour', 'Demi-Finale')",
+            },
+            status: {
+              type: "string",
+              enum: ["Upcoming", "Live", "Finished", "Cancelled"],
+              description: "The current status of the match",
+            },
+          },
+        },
       },
     },
   },
