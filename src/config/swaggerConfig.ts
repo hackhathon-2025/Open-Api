@@ -10,6 +10,24 @@ const options: swaggerJsdoc.Options = {
       version: "1.0.0",
       description: "API documentation for the Public API project",
     },
+    tags: [
+        {
+            name: "Competitions",
+            description: "Endpoints for managing competitions"
+        },
+        {
+            name: "Matches",
+            description: "Endpoints for managing matches"
+        },
+        {
+            name: "Results",
+            description: "Endpoints for managing results"
+        },
+        {
+            name: "Players",
+            description: "Endpoints for managing players"
+        }
+    ],
     servers: [{ url: BASE_URL }],
     components: {
       schemas: {

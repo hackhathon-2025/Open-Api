@@ -17,7 +17,7 @@ app.get("/", (req: Request, res: Response) => {
   res.json({
     message: "Welcome to the public API!",
     version: "1.0.0",
-    endpoints: ["GET /api/competitions"],
+    endpoints: ["GET /api/competitions", "GET /api/matches", "GET /api/results", "GET /api/players"],
     documentation: "/api-docs",
   });
 });
