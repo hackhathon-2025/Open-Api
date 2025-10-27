@@ -3,7 +3,7 @@ import { fetchCompetitions } from "../controllers/competitionController";
 import { fetchMatches } from "../controllers/matchController";
 import { fetchResults } from "../controllers/resultController";
 
-const router = Router();
+const router: Router = Router();
 
 /**
  * @swagger
