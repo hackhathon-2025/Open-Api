@@ -1,6 +1,6 @@
 import swaggerJsdoc from "swagger-jsdoc";
 
-const BASE_URL = process.env.API_BASE_URL || "http://localhost:3000";
+const BASE_URL = process.env.API_BASE_URL || "https://tennis-api-externe.onrender.com" || "http://localhost:3000";
 
 const options: swaggerJsdoc.Options = {
   definition: {
