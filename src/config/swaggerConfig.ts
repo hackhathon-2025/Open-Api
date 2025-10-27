@@ -70,6 +70,28 @@ const options: swaggerJsdoc.Options = {
             },
           },
         },
+        Player: {
+          type: "object",
+          required: ["id", "name", "country", "ranking"],
+          properties: {
+            id: {
+              type: "number",
+              description: "The auto-generated id of the player",
+            },
+            name: {
+              type: "string",
+              description: "The name of the player",
+            },
+            country: {
+              type: "string",
+              description: "The country code of the player (e.g., 'FRA', 'ESP')",
+            },
+            ranking: {
+              type: "number",
+              description: "The current ATP/WTA ranking of the player",
+            },
+          },
+        },
         LiveScore: {
           type: "object",
           required: ["set", "game", "point"],
@@ -116,10 +138,10 @@ const options: swaggerJsdoc.Options = {
               type: "number",
               description: "The ID of the match",
             },
-            winner_id: {
-              type: "number",
+            winner: {
+              $ref: "#/components/schemas/Player",
               nullable: true,
-              description: "The ID of the winning player (null if match is live)",
+              description: "The winning player object (null if match is live)",
             },
             score_sets: {
               $ref: "#/components/schemas/ScoreSets",
