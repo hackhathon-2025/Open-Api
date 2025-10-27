@@ -1,3 +1,4 @@
+import { PlayerDTO } from "./playerDTO";
 import { LiveScoreJSON, ScoreSetsJSON } from "./scoreDTO";
 
 /**
@@ -6,7 +7,7 @@ import { LiveScoreJSON, ScoreSetsJSON } from "./scoreDTO";
  */
 export interface ResultDTO {
   match_id: number;
-  winner_id: number | null; // Null si le match est 'Live'
+  winner: PlayerDTO | null; // Null si le match est 'Live'
 
   // Les scores peuvent être null si le match est 'Upcoming' ou s'il est 'Live' (le score est dans live_score)
   score_sets: ScoreSetsJSON | null;
