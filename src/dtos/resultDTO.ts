@@ -1,4 +1,4 @@
-import { LiveScoreJSON, ScoreSetsJSON } from "./score.dto";
+import { LiveScoreJSON, ScoreSetsJSON } from "./scoreDTO";
 
 /**
  * Interface représentant les données des résultats d'un match.
