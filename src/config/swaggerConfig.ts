@@ -1,5 +1,7 @@
 import swaggerJsdoc from "swagger-jsdoc";
 
+const BASE_URL = process.env.API_BASE_URL || "http://localhost:3000";
+
 const options: swaggerJsdoc.Options = {
   definition: {
     openapi: "3.0.0",
@@ -8,7 +10,7 @@ const options: swaggerJsdoc.Options = {
       version: "1.0.0",
       description: "API documentation for the Public API project",
     },
-    servers: [{ url: "http://localhost:3000" }],
+    servers: [{ url: BASE_URL }],
     components: {
       schemas: {
         Competition: {
