@@ -1,7 +1,7 @@
 import { supabase } from "../config/supabaseClient";
 import { MatchDTO } from "../dtos/matchDTO";
 
-export async function getMatches(matchId?: number, status?: string): Promise<MatchDTO[]> {
+export async function getMatches(matchId?: number, status?: string, competitionId?: number): Promise<MatchDTO[]> {
   let query = supabase.from("matches").select("*");
 
   if (matchId) {
@@ -10,6 +10,10 @@ export async function getMatches(matchId?: number, status?: string): Promise<Mat
 
   if (status) {
     query = query.eq("status", status);
+  }
+
+  if (competitionId) {
+    query = query.eq("competition_id", competitionId);
   }
 
   const { data, error } = await query;

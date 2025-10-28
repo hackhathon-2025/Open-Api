@@ -48,6 +48,11 @@ router.get("/competitions", fetchCompetitions);
  *     description: Retrieve a list of matches from the database. Can be filtered by match ID or status.
  *     parameters:
  *       - in: query
+ *         name: competitionId
+ *         schema:
+ *           type: integer
+ *         description: Optional ID of the competition to retrieve matches for.
+ *       - in: query
  *         name: matchId
  *         schema:
  *           type: integer

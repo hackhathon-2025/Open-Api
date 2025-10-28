@@ -1,6 +1,6 @@
 import swaggerJsdoc from "swagger-jsdoc";
 
-const BASE_URL = process.env.API_BASE_URL || "https://tennis-api-externe.onrender.com" || "http://localhost:3000";
+const BASE_URL = process.env.API_BASE_URL || "https://tennis-api-externe.onrender.com" || "http://localhost:3030";
 
 const options: swaggerJsdoc.Options = {
   definition: {
@@ -11,22 +11,22 @@ const options: swaggerJsdoc.Options = {
       description: "API documentation for the Public API project",
     },
     tags: [
-        {
-            name: "Competitions",
-            description: "Endpoints for managing competitions"
-        },
-        {
-            name: "Matches",
-            description: "Endpoints for managing matches"
-        },
-        {
-            name: "Results",
-            description: "Endpoints for managing results"
-        },
-        {
-            name: "Players",
-            description: "Endpoints for managing players"
-        }
+      {
+        name: "Competitions",
+        description: "Endpoints for managing competitions",
+      },
+      {
+        name: "Matches",
+        description: "Endpoints for managing matches",
+      },
+      {
+        name: "Results",
+        description: "Endpoints for managing results",
+      },
+      {
+        name: "Players",
+        description: "Endpoints for managing players",
+      },
     ],
     servers: [{ url: BASE_URL }],
     components: {

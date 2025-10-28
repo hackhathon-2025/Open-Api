@@ -5,7 +5,7 @@ import { swaggerSpec } from "./config/swaggerConfig";
 import cors from "cors";
 
 const app: Express = express();
-const port = 3000;
+const port = 3030;
 
 app.use(cors());
 
